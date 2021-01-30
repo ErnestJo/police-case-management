@@ -5,8 +5,33 @@
           </button>
       <span>App Logo</span>
       <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-      </button>
+      <div fxFlex fxLayout="row" fxLayoutAlign="end">
+          <ul fxLayout="row" fxLayoutGap="20px">
+              <li> 
+                  <button mat-icon-button >
+                      <mat-icon>settings</mat-icon>
+                  </button>
+              </li>
+              <li> 
+                <button mat-icon-button >
+                    <mat-icon>help_outline</mat-icon>
+                </button>
+            </li>
+            
+            <li>
+                <button mat-button [matMenuTriggerFor]="menu">
+                    <mat-icon>person_outline
+                    </mat-icon>
+                </button>
+                    <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <mat-icon>exit_to_app</mat-icon>
+                        Sing out
+                    </button>
+                    </mat-menu>
+                   
+            </li>
+          </ul>
+      </div>
     </mat-toolbar-row>
 </mat-toolbar>
