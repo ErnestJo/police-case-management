@@ -41,6 +41,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -55,6 +56,7 @@ import { MatTreeModule } from '@angular/material/tree';
     DragDropModule,
     FlexLayoutModule,
     LayoutModule,
+    RouterModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,
@@ -88,14 +90,15 @@ import { MatTreeModule } from '@angular/material/tree';
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatToolbarModule ,
+    MatIconModule
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    MatToolbarModule ,
-    MatIconModule
+    
   ],
   providers: [
     {
