@@ -42,6 +42,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { RouterModule } from '@angular/router';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 
 
@@ -49,7 +50,7 @@ import { RouterModule } from '@angular/router';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
   ],
   imports: [
     CommonModule,
@@ -92,12 +93,55 @@ import { RouterModule } from '@angular/router';
     MatTreeModule,
     MatBadgeModule,
     MatToolbarModule ,
-    MatIconModule
+    MatIconModule,
+    HighchartsChartModule
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
+    CommonModule,
+    DragDropModule,
+    FlexLayoutModule,
+    LayoutModule,
+    RouterModule,
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatStepperModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatTreeModule,
+    MatBadgeModule,
+    MatToolbarModule ,
+    MatIconModule,
+    HighchartsChartModule
     
   ],
   providers: [
