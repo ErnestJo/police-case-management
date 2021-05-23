@@ -27,8 +27,7 @@ import { MatListModule } from '@angular/material/list';
     SharedModule,
     MatSidenavModule,
     MatDividerModule,
-    MatListModule,
-    
+    MatListModule, 
   ]
 })
 export class DefaultModule { }

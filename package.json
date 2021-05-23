@@ -23,6 +23,8 @@
     "@angular/platform-browser-dynamic": "~11.1.0",
     "@angular/router": "~11.1.0",
     "angular-font-awesome": "^3.1.2",
+    "boostrap": "^2.0.0",
+    "bootstrap": "^5.0.1",
     "font-awesome": "^4.7.0",
     "highcharts": "^8.2.2",
     "highcharts-angular": "^2.9.0",

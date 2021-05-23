@@ -24,8 +24,8 @@ export interface caseElement {
 
 
 const ELEMENT_DATA: caseElement[] = [
-  { position: 1, name: '1000', weight: 'Deo', symbol: 'H', status: 'pending' },
-  { position: 2, name: '1023', weight: 'Deo', symbol: 'H', status: 'pending' }
+  { position: 1, name: '1000', weight: 'Deo Mushi', symbol: 'No', status: 'pending' },
+  { position: 2, name: '1023', weight: 'Ernest Josesp', symbol: 'Yes', status: 'progessing' }
   
 ]
 
