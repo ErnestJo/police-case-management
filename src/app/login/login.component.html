@@ -68,21 +68,27 @@
           </span>
           <mat-label>Password</mat-label>
           <input matInput type="{{ passwordInputType }}" formControlName="password">
-          <!-- <button mat-button *ngIf="loginForm.controls.password.value && !loading" matSuffix mat-icon-button
+          <button mat-button *ngIf="loginForm.controls.password.value && !loading" matSuffix mat-icon-button
             (mousedown)="passwordInputType = 'text'" (mouseup)="passwordInputType = 'password'">
             <fa-icon *ngIf="passwordInputType === 'password'" icon="eye"></fa-icon>
             <fa-icon *ngIf="passwordInputType === 'text'" icon="eye-slash"></fa-icon>
-          </button> -->
-          <!-- <mat-error *ngIf="loginForm.controls.password.hasError('required')">
+          </button> 
+          <mat-error *ngIf="loginForm.controls.password.hasError('required')">
             Password is <strong>required</strong>
-          </mat-error> -->
+          </mat-error>
         </mat-form-field>
         <button mat-raised-button color="primary"> Login
           <mat-spinner [diameter]="20" *ngIf="loading"></mat-spinner>
         </button>
-         
         </form>
       </div>
+     <mat-list fxHide.lt-lg fxLayout="row" fxFlexAlign="center" fxFlex="3 0 auto" class="information-list">
+      <mat-list-item><button mat-button >Resources</button></mat-list-item>
+      <mat-list-item><button mat-button >
+        <a href="https://pcase-api.herokuapp.com" target="_blank" mat-menu-item>API Documentation</a>
+      </button></mat-list-item>
+   
+    </mat-list>
   
     </div>
   
