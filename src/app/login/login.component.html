@@ -47,38 +47,43 @@
           Two Factor Authentication
           Forgot Password (TODO: Decision to be taken on providing this feature.)
       -->
-      <div fxLayout="row" fxFlex="3 0 auto" fxLayoutAlign="center start">
+      <div fxLayout="row" fxFlex="5 0 auto" fxLayoutAlign="center start">
+        
+        <form fxLayout="column" [formGroup]="loginForm" (ngSubmit)="login()" id="login-form">
 
+        <mat-form-field fxFlexAlign="center" class="login-input" >
+          <span matPrefix>
+            <fa-icon icon="user-circle" size="lg"></fa-icon>&nbsp;&nbsp;
+          </span>
+          <mat-label>Username</mat-label>
+           <input matInput type="text" autocomplete="off" formControlName="username">
+             <!-- <mat-error *ngIf="loginForm.controls.username.hasError('required')">
+                   Username is <strong>required</strong>
+             </mat-error> -->
+        </mat-form-field>    
+        
+        <mat-form-field fxFlexAlign="center" class="login-input">
+          <span matPrefix>
+            <fa-icon icon="lock" size="lg"></fa-icon>&nbsp;&nbsp;
+          </span>
+          <mat-label>Password</mat-label>
+          <input matInput type="{{ passwordInputType }}" formControlName="password">
+          <!-- <button mat-button *ngIf="loginForm.controls.password.value && !loading" matSuffix mat-icon-button
+            (mousedown)="passwordInputType = 'text'" (mouseup)="passwordInputType = 'password'">
+            <fa-icon *ngIf="passwordInputType === 'password'" icon="eye"></fa-icon>
+            <fa-icon *ngIf="passwordInputType === 'text'" icon="eye-slash"></fa-icon>
+          </button> -->
+          <!-- <mat-error *ngIf="loginForm.controls.password.hasError('required')">
+            Password is <strong>required</strong>
+          </mat-error> -->
+        </mat-form-field>
+        <button mat-raised-button color="primary"> Login
+          <mat-spinner [diameter]="20" *ngIf="loading"></mat-spinner>
+        </button>
+         
+        </form>
       </div>
   
-      <!-- Contact Information/Resources (hidden on smaller screens) -->
-      <mat-list fxHide.lt-lg fxLayout="row" fxFlexAlign="center" fxFlex="3 0 auto" class="information-list">
-        <mat-list-item><button mat-button [matMenuTriggerFor]="resourcesMenu">Resources</button></mat-list-item>
-        <mat-list-item><button mat-button [matMenuTriggerFor]="communityMenu">Community</button></mat-list-item>
-        <mat-list-item><button mat-button [matMenuTriggerFor]="contributeMenu">Contribute</button></mat-list-item>
-      </mat-list>
-  
-      <!-- Footer -->
     </div>
   
   </div>
-  
-  <!-- Contact Information/Resources Menus -->
-  <mat-menu #resourcesMenu="matMenu">
-    <a href="https://mifosforge.jira.com/wiki/spaces/docs/pages/52035622/User+Manual" target="_blank" mat-menu-item>User Manual</a>
-    <a href="https://cwiki.apache.org/confluence/display/FINERACT/Apache+Fineract+1.0+Functional+Specifications" target="_blank" mat-menu-item>Functional Specifications</a>
-    <a href="https://cwiki.apache.org/confluence/display/FINERACT/Contributor%27s+Zone" target="_blank" mat-menu-item>Developer Zone</a>
-  </mat-menu>
-  
-  <mat-menu #communityMenu="matMenu">
-    <a href="https://groups.google.com/forum/#!forum/mifosusers" target="_blank" mat-menu-item>User Group</a>
-    <a href="https://groups.google.com/forum/#!forum/mifosdeveloper" target="_blank" mat-menu-item>Developer Group</a>
-    <a href="http://mifos.org/resources/community/communications/#mifos-irc" target="_blank" mat-menu-item>IRC</a>
-  </mat-menu>
-  
-  <mat-menu #contributeMenu="matMenu">
-    <a href="https://mifosforge.jira.com/wiki/spaces/MDZ/pages/92012624/Key+Design+Principles" target="_blank" mat-menu-item>Key Design Principles</a>
-    <a href="https://sourceforge.net/projects/mifos/" target="_blank" mat-menu-item>Working with Code</a>
-    <a href="http://mifos.org/donate/" target="_blank" mat-menu-item>Donate</a>
-  </mat-menu>
-  

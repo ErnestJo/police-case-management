@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -6,7 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layout/default/default.module';
 import { SharedModule } from './shared/shared.module';
 import { LoginComponent } from './login/login.component';
-import { LoginFormComponent } from './login/login-form/login-form.component';
+import { IconsModule } from './shared/icons.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 //material imports
@@ -53,10 +54,15 @@ import { RouterModule } from '@angular/router';
 import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
+
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
   declarations: [
     AppComponent,
     LoginComponent,
-    LoginFormComponent,
+
+
  
   
   ],
@@ -66,6 +72,8 @@ import { HighchartsChartModule } from 'highcharts-angular';
     BrowserAnimationsModule,
     DefaultModule,
     SharedModule,
+    IconsModule,
+    ReactiveFormsModule,
   
 
     // material imports
@@ -113,7 +121,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
     HighchartsChartModule
   ],
   exports: [
-    
+    ReactiveFormsModule,
     CommonModule,
     DragDropModule,
     FlexLayoutModule,
@@ -155,7 +163,8 @@ import { HighchartsChartModule } from 'highcharts-angular';
     MatBadgeModule,
     MatToolbarModule ,
     MatIconModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    IconsModule
    
   ],
   providers: [],
