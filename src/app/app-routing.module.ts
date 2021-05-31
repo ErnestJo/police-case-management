@@ -4,20 +4,25 @@ import { DefaultComponent } from './layout/default/default.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { PostComponent } from './modules/post/post.component';
 import { CaseComponent } from './modules/case/case.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [{
-  path:'',
-  component: DefaultComponent,
+  path:'login',
+  component: LoginComponent,
   children: [{
     path:'',
-    component: DashboardComponent,
-  }, {
+    component: DashboardComponent ,
+    },
+    {
     path: 'posts',
     component: PostComponent,
-    }, {
+    },
+    {
       path: 'case',
    component: CaseComponent,  
-  }]
+    }],
+  
+  
 }];
 
 @NgModule({

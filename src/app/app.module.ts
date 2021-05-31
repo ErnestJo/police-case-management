@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layout/default/default.module';
 import { SharedModule } from './shared/shared.module';
-import { PersonalDetailsViewComponent } from './modules/post/Rb/personal-details-view/personal-details-view.component';
+import { LoginComponent } from './login/login.component';
+import { LoginFormComponent } from './login/login-form/login-form.component';
 
 
 
@@ -13,6 +14,8 @@ import { PersonalDetailsViewComponent } from './modules/post/Rb/personal-details
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    LoginFormComponent,
  
   
   ],
